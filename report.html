@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item - Saylani Campus Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <div id="report-screen" class="min-vh-100 p-4">
+        <div class="container" style="max-width: 800px;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="d:\img\saylani-welfare-international-trust-logo-png_seeklogo-283422.png" alt="Logo"
+                        style="width: 100px;">
+                    <h4 class="fw-bold text-dark mb-0">Campus Portal</h4>
+                </div>
+                <button class="btn btn-primary px-4 py-2 rounded-pill shadow-sm"><a href="student.html"
+                        class="back fw-bold">Back to Dashboard</a></button>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 p-md-5">
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <i class="fa-solid fa-suitcase-rolling text-success fs-3"></i>
+                    <h3 class="fw-bold mb-0">Lost Found Report</h3>
+                </div>
+                <p class="text-secondary fw-bold mb-5">Report Lost Item</p>
+
+                <form id="reportForm">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted">Item Name</label>
+                            <input type="text" class="form-control bg-light border-0 py-3" placeholder="Enter item name"
+                                required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-muted">Category</label>
+                            <select class="form-select bg-light border-0 py-3 text-muted">
+                                <option selected>Mobile</option>
+                                <option>Electronics</option>
+                                <option>Bags</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold text-muted">Item Brand/Model</label>
+                            <input type="text" class="form-control bg-light border-0 py-3" placeholder="e.g. iPhone 13">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted">Description</label>
+                            <textarea class="form-control bg-light border-0 py-3" rows="4"
+                                placeholder="Describe the item in detail (color, marks, etc.)" required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted">Location</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-0"><i
+                                        class="fa-solid fa-location-dot text-muted"></i></span>
+                                <input type="text" class="form-control bg-light border-0 py-3"
+                                    placeholder="Where was it lost?" required>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted d-block mb-3">Urgency</label>
+                            <div class="d-flex gap-4 align-items-center">
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="urgency" id="urgencyLow" checked>
+                                    <label class="form-check-label d-flex align-items-center gap-2" for="urgencyLow">
+                                        <span class="dot bg-success"></span>
+                                        <span class="small fw-bold text-muted">Low</span>
+                                    </label>
+                                </div>
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="urgency" id="urgencyMedium">
+                                    <label class="form-check-label d-flex align-items-center gap-2" for="urgencyMedium">
+                                        <span class="dot bg-warning"></span>
+                                        <span class="small fw-bold text-muted">Medium</span>
+                                    </label>
+                                </div>
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="urgency" id="urgencyHigh">
+                                    <label class="form-check-label d-flex align-items-center gap-2" for="urgencyHigh">
+                                        <span class="dot bg-danger"></span>
+                                        <span class="small fw-bold text-muted">High</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold stupid"><a
+                                    href="submit.html" class="newz">submit complaint</a></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('reportForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Your report has been submitted successfully! We will notify you if a match is found.');
+            window.location.href = 'student.html';
+        });
+    </script>
+</body>
+
+</html>

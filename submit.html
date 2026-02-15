@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Complaint - Saylani Campus Portal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <div id="submit-screen" class="min-vh-100 p-4">
+        <div class="container" style="max-width: 900px;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="d:\img\saylani-welfare-international-trust-logo-png_seeklogo-283422.png" alt="Logo"
+                        style="width: 100px;">
+                    <h4 class="fw-bold text-dark mb-0">Campus Portal</h4>
+                </div>
+                <button class="btn btn-primary px-4 py-2 rounded-pill shadow-sm"><a href="student.html"
+                        class="back fw-bold">Back to Dashboard</a></button>
+            </div>
+
+            <!-- Submit Complaint Form Card -->
+            <div class="card border-0 shadow-sm p-4 p-md-5 mb-5">
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <i class="fa-solid fa-file-pen text-success fs-3"></i>
+                    <h3 class="fw-bold mb-0">Submit Complaint</h3>
+                </div>
+
+                <form id="complaintForm">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted">Complaint Title</label>
+                            <input type="text" class="form-control bg-light border-0 py-3"
+                                placeholder="Enter complaint title" required>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label class="form-label small fw-bold text-muted">Category</label>
+                            <select class="form-select bg-light border-0 py-3 text-muted">
+                                <option selected>Pickpocketing</option>
+                                <option>Harassment</option>
+                                <option>Infrastructure Issue</option>
+                                <option>Staff Behavior</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted">Description</label>
+                            <textarea class="form-control bg-light border-0 py-3" rows="4"
+                                placeholder="Describe the incident in detail" required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted">Location</label>
+                            <input type="text" class="form-control bg-light border-0 py-3"
+                                placeholder="Where did it occur?" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label small fw-bold text-muted d-block mb-3">Urgency</label>
+                            <div class="d-flex gap-4 align-items-center">
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="urgency" id="urgencyLow" checked>
+                                    <label class="form-check-label d-flex align-items-center gap-2" for="urgencyLow">
+                                        <span class="dot bg-success"></span>
+                                        <span class="small fw-bold text-muted">Low</span>
+                                    </label>
+                                </div>
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="urgency" id="urgencyMedium">
+                                    <label class="form-check-label d-flex align-items-center gap-2" for="urgencyMedium">
+                                        <span class="dot bg-warning"></span>
+                                        <span class="small fw-bold text-muted">Medium</span>
+                                    </label>
+                                </div>
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="radio" name="urgency" id="urgencyHigh">
+                                    <label class="form-check-label d-flex align-items-center gap-2" for="urgencyHigh">
+                                        <span class="dot bg-danger"></span>
+                                        <span class="small fw-bold text-muted">High</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-5 text-center">
+                            <button type="submit"
+                                class="btn btn-primary btn-lg w-100 py-3 fw-bold rounded-3 shadow">Submit
+                                Complaint</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- My Complaints Table Card -->
+            <div class="card border-0 shadow-sm p-4 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-circle-exclamation text-primary fs-4"></i>
+                        <h4 class="fw-bold mb-0">My Complaints</h4>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="small text-muted">Status: <span class="text-dark fw-bold">All</span></div>
+                        <div class="small text-muted">Category: <span class="text-dark fw-bold">All</span></div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="text-muted small text-uppercase">
+                            <tr>
+                                <th class="border-0 pb-3">ID</th>
+                                <th class="border-0 pb-3">Complaint</th>
+                                <th class="border-0 pb-3">Location</th>
+                                <th class="border-0 pb-3 text-center">Status</th>
+                                <th class="border-0 pb-3 text-end">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-bottom border-light">
+                                <td class="py-3 fw-medium">503</td>
+                                <td class="py-3 fw-bold text-dark">Wi-Fi Not Working</td>
+                                <td class="py-3 text-muted">GH Hall</td>
+                                <td class="py-3 text-center">
+                                    <span
+                                        class="badge rounded-pill bg-warning text-dark px-3 py-2 opacity-75 small fw-bold">Pending</span>
+                                </td>
+                                <td class="py-3 text-end"><i
+                                        class="fa-solid fa-ellipsis-vertical text-muted cursor-pointer"></i></td>
+                            </tr>
+                            <tr class="border-bottom border-light">
+                                <td class="py-3 fw-medium">504</td>
+                                <td class="py-3 fw-bold text-dark">Leaky Pipe</td>
+                                <td class="py-3 text-muted">City Park</td>
+                                <td class="py-3 text-center">
+                                    <span
+                                        class="badge rounded-pill bg-success text-white px-3 py-2 opacity-75 small fw-bold">Resolved</span>
+                                </td>
+                                <td class="py-3 text-end"><i
+                                        class="fa-solid fa-ellipsis-vertical text-muted cursor-pointer"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('complaintForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = 'submits.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+:root {
+    --primary-blue: rgb(81, 81, 240);
+    --primary-blue-hover: rgb(60, 60, 220);
+    --bg-light: #f4f7f6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Colors and Utilities */
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue-hover) !important;
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-blue-light {
+    background-color: rgba(81, 81, 240, 0.1);
+}
+
+.bg-danger-light {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.bg-success-light {
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+.bg-warning-light {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Custom Component Styles */
+.brand-bg-decoration {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(25, 135, 84, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.brand-wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.brand-wave-top {
+    top: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3%3Cpath fill='%23198754' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+    transform: scaleX(-1);
+}
+
+.brand-wave-bottom {
+    bottom: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3%3Cpath fill='%23198754' fill-opacity='1' d='M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.glass-login {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+.nav-pills .nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-blue) !important;
+}
+
+.shadow-xs {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation */
+#login-screen,
+#dashboard-screen {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* List group overrides */
+.list-group-item {
+    background-color: transparent !important;
+}
+
+.badge {
+    min-width: 100px;
+}
+
+.glass-dark {
+    background: rgba(33, 37, 41, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+}
+
+.x-small {
+    font-size: 0.7rem;
+}
+
+.vh-100 {
+    height: 100vh !important;
+}
+
+.vw-100 {
+    width: 100vw !important;
+}
+
+/* Custom padding for nested cards */
+.bg-opacity-10 {
+    --bs-bg-opacity: 0.1;
+}
+
+.bg-opacity-25 {
+    --bs-bg-opacity: 0.25;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Card refinements */
+.card {
+    border-radius: 20px !important;
+}
+
+.form-control,
+.form-select {
+    border-radius: 12px;
+}
+
+.lam,
+.lum,
+.back,
+.newz,
+.nim,
+.exp {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.stupid {
+    max-width: 500px !important;
+    width: 100% !important;
+    align-items: center !important;
+    color: #ffffff !important;
+}
+
+.newx {
+    background-color: rgb(0, 255, 140) !important;
+    color: #212529 !important;
+}
+
+.exam {
+    max-width: 300px;
+    margin: 0 auto;
+}
